@@ -1,0 +1,27 @@
+<head>
+    <title>GAtrial Click</title>
+    <meta name="google-signin-client_id" content="448772036403-855bf216jb8ht0p1qivht8lkajan854c.apps.googleusercontent.com">
+    <meta name="google-signin-scope" content="https://www.googleapis.com/auth/analytics.readonly">
+</head>
+
+<body>
+
+      <script src="https://apis.google.com/js/client.js?onload=authorize"></script>
+    <h1>Analytics Reporting API V4 Trial December 26th, 2017 9:49am</h1>
+
+    <!--ga:user -->
+    <!-- ga:goalXXCompletions -->
+
+    {{> gabutton}}
+      <!---the id query-output needs to be linked to CallServer.js, line 60  -->
+    <textarea cols="80" rows="20" id="query-output"></textarea>
+
+</body>
+
+<template name="gabutton">
+    <p>Press the button for a Google Analytics query.</p>
+    <button id="authorizebutton">Authorize A Google Analytics Query</button>
+    <!---Need to understand how to link with the line below. -->
+    <!-- The Sign-in button. This will run `queryReports()` on success. -->
+    <div class="g-signin2" data-onsuccess="queryReports"></div>
+</template>
