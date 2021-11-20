@@ -1,0 +1,25 @@
+ggplot(mtcars, aes(x = factor(disp))) + geom_bar(fill = mycolors)
+library(twitteR)
+library(devtools)
+setup_twitter_oauth("SSAEGOWJ2OI5LT7tDUPjeP96v","bpyHAXEQu943fHuqHEKz1XsDhFiH8vAPG90d3ZnKi0JlVlxyLA","15826695-CWMB6YG8P1iw3lf2en7ndIgDfJEI6yJx3Q2lBZ7rV","B1aWinOjYHHwwUm4UlaWTCZAp7ihFATDo6NepWiBXrUdG")
+library(ROAuth)
+searchTwitter("#marketing")
+userTimeline("paix120")
+#The following are tweets using the hashtag Scandal. This is
+#for demonstration. You can insert a hashtag of your choice.
+Olivia_tweets = searchTwitter("#scandalABC")
+print(Olivia_tweets)
+favorites('zimanaanalytics', n = 20)
+data()
+data("mtcars")
+print("mtcars")
+library(ggplot2)
+head(mtcars)
+plot(mtcars$disp, mtcars$hp, xlab = "Engine Displacement", ylab = "Horsepower", main = "Sample Comparison of Horsepower vs Displacement")
+ 
+library(ggplot2)
+mycolors <- heat.colors(27)
+ggplot(mtcars, aes(x = factor(disp))) + geom_bar(fill = mycolors)
+#quick plot
+qplot(disp, data=mtcars, binwidth=5)
+data()
